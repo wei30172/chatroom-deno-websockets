@@ -96,7 +96,8 @@
 
   <script>
     // set websocket connection
-    let ws = new WebSocket(`${location.origin}ws`);
+    const HOST = location.origin? location.origin.replace(/^https/, 'ws') : 'ws://localhost:8000'
+    let ws = new WebSocket(`${HOST}/ws`);
     // dom refs
     const nameForm = document.querySelector('.name-form');
     const chatname = document.querySelector('.chat-name');
