@@ -43,7 +43,7 @@ const handleWs = async(ws: WebSocket) => {
   } catch (err) {
     console.error(`failed to receive frame: ${err}`);
     if (!ws.isClosed) {
-      await ws.close(1000).catch(console.error);
+      await ws.close(6000000).catch(console.error);
     }
   }
 }
