@@ -8,7 +8,6 @@ const DEFAULT_PORT = 8000;
 const argPort = parse(args).port;
 
 const server = serve({ port: argPort ? Number(argPort) : DEFAULT_PORT });
-console.log("http://localhost:8000/");
 
 for await (const req of server) {
   if (req.url === '/') {
