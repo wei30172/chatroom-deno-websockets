@@ -1,1 +1,1 @@
-web: deno run --allow-net=:${PORT} app.ts --port=${PORT}
+web: deno run --allow-net=:${PORT} --allow-read --allow-write --allow-plugin --unstable -c app.ts --port=${PORT}
